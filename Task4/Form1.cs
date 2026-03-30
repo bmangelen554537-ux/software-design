@@ -1,4 +1,4 @@
-namespace lab1
+namespace Task4
 {
     public partial class Form1 : Form
     {
@@ -10,11 +10,6 @@ namespace lab1
         {
             Array.Sort(numbers);
             return numbers;
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnSort_Click(object sender, EventArgs e)
