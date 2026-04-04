@@ -30,32 +30,49 @@
         {
             btnSort = new Button();
             listBoxResults = new ListBox();
+            btnOrder = new Button();
             SuspendLayout();
             // 
             // btnSort
             // 
-            btnSort.Location = new Point(100, 85);
+            btnSort.Location = new Point(114, 113);
+            btnSort.Margin = new Padding(3, 4, 3, 4);
             btnSort.Name = "btnSort";
-            btnSort.Size = new Size(89, 41);
+            btnSort.Size = new Size(102, 55);
             btnSort.TabIndex = 0;
-            btnSort.Text = "Sort";
+            btnSort.Text = "Bubble Sort";
             btnSort.UseVisualStyleBackColor = true;
+            btnSort.Click += btnSort_Click;
             // 
             // listBoxResults
             // 
             listBoxResults.FormattingEnabled = true;
-            listBoxResults.Location = new Point(248, 45);
+            listBoxResults.Location = new Point(283, 60);
+            listBoxResults.Margin = new Padding(3, 4, 3, 4);
             listBoxResults.Name = "listBoxResults";
-            listBoxResults.Size = new Size(444, 289);
+            listBoxResults.Size = new Size(507, 384);
             listBoxResults.TabIndex = 1;
+            // 
+            // btnOrder
+            // 
+            btnOrder.Location = new Point(114, 235);
+            btnOrder.Margin = new Padding(3, 4, 3, 4);
+            btnOrder.Name = "btnOrder";
+            btnOrder.Size = new Size(102, 55);
+            btnOrder.TabIndex = 2;
+            btnOrder.Text = "Descending Order";
+            btnOrder.UseVisualStyleBackColor = true;
+            btnOrder.Click += btnOrder_Click;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
+            Controls.Add(btnOrder);
             Controls.Add(listBoxResults);
             Controls.Add(btnSort);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -65,5 +82,6 @@
 
         private Button btnSort;
         private ListBox listBoxResults;
+        private Button btnOrder;
     }
 }
