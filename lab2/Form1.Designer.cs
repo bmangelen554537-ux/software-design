@@ -135,7 +135,7 @@
             lblResultFibo.BackColor = Color.MistyRose;
             lblResultFibo.Location = new Point(68, 346);
             lblResultFibo.Name = "lblResultFibo";
-            lblResultFibo.Size = new Size(163, 27);
+            lblResultFibo.Size = new Size(214, 27);
             lblResultFibo.TabIndex = 9;
             // 
             // txtBaseNum
