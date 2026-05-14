@@ -30,6 +30,7 @@
         {
             listBoxBooks = new ListBox();
             groupBox1 = new GroupBox();
+            progressBar1 = new ProgressBar();
             btnDeleteBook = new Button();
             btnUpdateBook = new Button();
             btnFetchBooks = new Button();
@@ -40,6 +41,8 @@
             txtBookId = new TextBox();
             txtBookTitle = new TextBox();
             txtAuthorName = new TextBox();
+            txtSearch = new TextBox();
+            btnSearch = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -47,7 +50,7 @@
             // 
             listBoxBooks.FormattingEnabled = true;
             listBoxBooks.ItemHeight = 15;
-            listBoxBooks.Location = new Point(22, 30);
+            listBoxBooks.Location = new Point(23, 43);
             listBoxBooks.Name = "listBoxBooks";
             listBoxBooks.Size = new Size(362, 379);
             listBoxBooks.TabIndex = 0;
@@ -55,6 +58,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(progressBar1);
             groupBox1.Controls.Add(btnDeleteBook);
             groupBox1.Controls.Add(btnUpdateBook);
             groupBox1.Controls.Add(btnFetchBooks);
@@ -65,12 +69,19 @@
             groupBox1.Controls.Add(txtBookId);
             groupBox1.Controls.Add(txtBookTitle);
             groupBox1.Controls.Add(txtAuthorName);
-            groupBox1.Location = new Point(411, 30);
+            groupBox1.Location = new Point(414, 43);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(353, 379);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Information";
+            // 
+            // progressBar1
+            // 
+            progressBar1.Location = new Point(18, 326);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(318, 23);
+            progressBar1.TabIndex = 10;
             // 
             // btnDeleteBook
             // 
@@ -86,7 +97,7 @@
             // btnUpdateBook
             // 
             btnUpdateBook.BackColor = Color.SteelBlue;
-            btnUpdateBook.Location = new Point(18, 257);
+            btnUpdateBook.Location = new Point(61, 257);
             btnUpdateBook.Name = "btnUpdateBook";
             btnUpdateBook.Size = new Size(89, 23);
             btnUpdateBook.TabIndex = 8;
@@ -108,7 +119,7 @@
             // btnAddBook
             // 
             btnAddBook.BackColor = Color.YellowGreen;
-            btnAddBook.Location = new Point(18, 213);
+            btnAddBook.Location = new Point(61, 213);
             btnAddBook.Name = "btnAddBook";
             btnAddBook.Size = new Size(89, 23);
             btnAddBook.TabIndex = 6;
@@ -145,8 +156,10 @@
             // 
             // txtBookId
             // 
+            txtBookId.Enabled = false;
             txtBookId.Location = new Point(105, 148);
             txtBookId.Name = "txtBookId";
+            txtBookId.ReadOnly = true;
             txtBookId.Size = new Size(222, 23);
             txtBookId.TabIndex = 2;
             // 
@@ -164,12 +177,34 @@
             txtAuthorName.Size = new Size(222, 23);
             txtAuthorName.TabIndex = 0;
             // 
+            // txtSearch
+            // 
+            txtSearch.Location = new Point(23, 12);
+            txtSearch.Name = "txtSearch";
+            txtSearch.PlaceholderText = "Search...";
+            txtSearch.Size = new Size(282, 23);
+            txtSearch.TabIndex = 2;
+            txtSearch.TextChanged += txtSearch_TextChanged;
+            // 
+            // btnSearch
+            // 
+            btnSearch.BackColor = Color.AliceBlue;
+            btnSearch.Location = new Point(336, 14);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(89, 23);
+            btnSearch.TabIndex = 11;
+            btnSearch.Text = "Search";
+            btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click_1;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.NavajoWhite;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnSearch);
+            Controls.Add(txtSearch);
             Controls.Add(groupBox1);
             Controls.Add(listBoxBooks);
             Name = "Form1";
@@ -178,6 +213,7 @@
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -194,5 +230,8 @@
         private Button btnFetchBooks;
         private Button btnAddBook;
         private Label label3;
+        private ProgressBar progressBar1;
+        private TextBox txtSearch;
+        private Button btnSearch;
     }
 }
