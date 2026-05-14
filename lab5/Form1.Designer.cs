@@ -68,6 +68,7 @@
             btnShowBooks.TabIndex = 2;
             btnShowBooks.Text = "Show Books";
             btnShowBooks.UseVisualStyleBackColor = true;
+            btnShowBooks.Click += btnShowBooks_Click_1;
             // 
             // btnUpdateBook
             // 
@@ -93,9 +94,11 @@
             // 
             // txtBookId
             // 
+            txtBookId.Enabled = false;
             txtBookId.Location = new Point(449, 75);
             txtBookId.Name = "txtBookId";
             txtBookId.PlaceholderText = "Book ID";
+            txtBookId.ReadOnly = true;
             txtBookId.Size = new Size(263, 23);
             txtBookId.TabIndex = 5;
             txtBookId.Enter += txtBookId_Enter;
