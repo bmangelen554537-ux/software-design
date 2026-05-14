@@ -152,10 +152,6 @@ namespace lab5
             txtAuthorName.Clear();
         }
 
-        private void btnShowBooks_Click(object sender, EventArgs e)
-        {
-            RefreshData();
-        }
 
         private void txtAuthorName_Enter(object sender, EventArgs e)
         {
@@ -170,6 +166,11 @@ namespace lab5
         private void txtBookTitle_Enter(object sender, EventArgs e)
         {
             txtBookTitle.Clear();
+        }
+
+        private void btnShowBooks_Click_1(object sender, EventArgs e)
+        {
+            RefreshData();
         }
     }
 }
