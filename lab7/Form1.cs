@@ -18,13 +18,10 @@ namespace lab7
         public Form1()
         {
             InitializeComponent();
-            // Load initial data when the form opens
             this.Load += async (s, e) => await LoadBooksAsync();
 
             using (var context = new AppDbContext())
             {
-                // This checks if the 'Books' table exists. 
-                // If not, it creates it immediately.
                 context.Database.EnsureCreated();
             }
         }
@@ -38,10 +35,9 @@ namespace lab7
                     .Take(pageSize)
                     .ToListAsync();
 
-                lbxBooks.DataSource = null; // Resetting the source helps UI refresh correctly
+                lbxBooks.DataSource = null;
                 lbxBooks.DataSource = books;
 
-                // CHANGE THIS LINE:
                 lbxBooks.DisplayMember = "DisplayText";
 
                 lblPageNumber.Text = $"Page: {currentPage}";
@@ -80,7 +76,7 @@ namespace lab7
                 }
                 txtBookTitle.Clear();
                 txtBookAuthor.Clear();
-                await LoadBooksAsync(); // Refresh the list
+                await LoadBooksAsync(); 
             }
             catch (Exception ex)
             {
@@ -123,7 +119,7 @@ namespace lab7
                     .ToListAsync();
 
                 lbxBooks.DataSource = results;
-                lbxBooks.DisplayMember = "DisplayText"; // Keep it consistent!
+                lbxBooks.DisplayMember = "DisplayText";
             }
         }
 

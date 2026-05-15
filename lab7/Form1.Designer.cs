@@ -78,9 +78,9 @@
             groupBox2.Controls.Add(btnNextPage);
             groupBox2.Controls.Add(lblPageNumber);
             groupBox2.Controls.Add(btnPreviousPage);
-            groupBox2.Location = new Point(231, 357);
+            groupBox2.Location = new Point(210, 357);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(346, 81);
+            groupBox2.Size = new Size(346, 65);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "Pagination";
@@ -98,7 +98,7 @@
             // lblPageNumber
             // 
             lblPageNumber.AutoSize = true;
-            lblPageNumber.Location = new Point(153, 38);
+            lblPageNumber.Location = new Point(146, 38);
             lblPageNumber.Name = "lblPageNumber";
             lblPageNumber.Size = new Size(39, 15);
             lblPageNumber.TabIndex = 9;
@@ -234,7 +234,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Snow;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 432);
             Controls.Add(btnSearch);
             Controls.Add(label1);
             Controls.Add(txtSearchTitle);
@@ -243,6 +243,7 @@
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             groupBox1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
