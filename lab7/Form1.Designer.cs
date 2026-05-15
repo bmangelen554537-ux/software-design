@@ -165,7 +165,7 @@
             // 
             btnSaveBook.Location = new Point(113, 116);
             btnSaveBook.Name = "btnSaveBook";
-            btnSaveBook.Size = new Size(125, 34);
+            btnSaveBook.Size = new Size(125, 38);
             btnSaveBook.TabIndex = 7;
             btnSaveBook.Text = "Save Book";
             btnSaveBook.UseVisualStyleBackColor = true;
