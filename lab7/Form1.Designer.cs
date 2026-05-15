@@ -213,9 +213,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(394, 24);
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(383, 27);
             label1.Name = "label1";
-            label1.Size = new Size(87, 15);
+            label1.Size = new Size(92, 15);
             label1.TabIndex = 3;
             label1.Text = "Search by Title:";
             // 
